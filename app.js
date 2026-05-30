@@ -49,6 +49,12 @@ app.get("/filmes/:id/:nome", (req, res) => {
     res.send(`O filme tem id: ${id} e nome ${nome}`)
 });
 
+//questão 9
+app.get("/buscar", (req, res) =>{
+    const nome = req.query.nome
+    res.send(`Buscado por: ${nome}`)
+});
+
 app.listen(8081, () => {
     console.log("Servidor rodando")
 });
