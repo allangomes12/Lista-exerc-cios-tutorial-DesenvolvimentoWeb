@@ -25,6 +25,11 @@ app.get("/erro", (req, res) => {
     res.status(404).send("Página não encontrada")
 });
 
+//questão 5
+app.get("/inicio", (req, res) =>{
+    res.redirect("/")
+});
+
 app.listen(8081, () => {
     console.log("Servidor rodando")
 });
