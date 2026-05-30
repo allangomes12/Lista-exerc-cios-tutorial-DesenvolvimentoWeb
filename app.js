@@ -36,6 +36,12 @@ app.get("/usuarios/:id", (req, res) => {
     res.send(`Usuário ${id}`)
 });
 
+// questão 7
+app.get("/produtos/:nome", (req, res) =>{
+    const nome = req.params.nome
+    res.send(`Nome do produto: ${nome}`)
+});
+
 app.listen(8081, () => {
     console.log("Servidor rodando")
 });
