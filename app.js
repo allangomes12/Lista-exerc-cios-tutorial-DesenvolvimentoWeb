@@ -30,6 +30,12 @@ app.get("/inicio", (req, res) =>{
     res.redirect("/")
 });
 
+// questão 6
+app.get("/usuarios/:id", (req, res) => {
+    const id = req.params.id
+    res.send(`Usuário ${id}`)
+});
+
 app.listen(8081, () => {
     console.log("Servidor rodando")
 });
