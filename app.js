@@ -55,6 +55,13 @@ app.get("/buscar", (req, res) =>{
     res.send(`Buscado por: ${nome}`)
 });
 
+//Questão 10
+app.get("/produtos", (req, res) =>{
+    const categoria = req.query.categoria
+    const pagina = req.query.pagina
+    res.send(`Categoria: ${categoria} / Página: ${pagina}`)
+});
+
 app.listen(8081, () => {
     console.log("Servidor rodando")
 });
