@@ -42,6 +42,13 @@ app.get("/produtos/:nome", (req, res) =>{
     res.send(`Nome do produto: ${nome}`)
 });
 
+// questão 8
+app.get("/filmes/:id/:nome", (req, res) => {
+    const id = req.params.id
+    const nome = req.params.nome
+    res.send(`O filme tem id: ${id} e nome ${nome}`)
+});
+
 app.listen(8081, () => {
     console.log("Servidor rodando")
 });
