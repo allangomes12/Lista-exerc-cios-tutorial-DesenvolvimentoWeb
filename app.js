@@ -76,6 +76,13 @@ app.get("/home", (req, res) => {
     res.render("home")
 });
 
+// questão 13
+app.get("/perfil", (req, res) => {
+    res.render("perfil", {
+        nome: "allan",
+        idade: 16
+    });
+});
 
 app.listen(8081, () => {
     console.log("Servidor rodando")
