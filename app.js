@@ -2,6 +2,9 @@ const express = require("express")
 const exphbs = require("express-handlebars")
 const app = express()
 
+app.engine('handlebars', exphbs.engine());
+app.set('view engine', 'handlebars');
+
 // questão 1
 app.get("/", (req, res) => {
     res.send("Bem-vindo ao sistema")
@@ -67,6 +70,12 @@ app.get("/usuarios", (req, res) =>{
     const idade = req.query.idade
     res.send(`Filtrando usuários com idade ${idade}`)
 });
+
+// questão 12
+app.get("/home", (req, res) => {
+    res.render("home")
+});
+
 
 app.listen(8081, () => {
     console.log("Servidor rodando")
