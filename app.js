@@ -62,6 +62,12 @@ app.get("/produtos", (req, res) =>{
     res.send(`Categoria: ${categoria} / Página: ${pagina}`)
 });
 
+// questão 11
+app.get("/usuarios", (req, res) =>{
+    const idade = req.query.idade
+    res.send(`Filtrando usuários com idade ${idade}`)
+});
+
 app.listen(8081, () => {
     console.log("Servidor rodando")
 });
