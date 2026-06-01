@@ -87,7 +87,7 @@ app.get("/perfil", (req, res) => {
 });
 
 // questão 14
-app.get("/filmes", (req, res) => {
+app.get("/filme", (req, res) => {
     res.render("filmes", {
         filmes: [
             'Terror',
@@ -106,6 +106,17 @@ app.get("/perfil2", (req, res) => {
         ]
 
     })
+});
+
+// questão 16
+app.get("/filmes", (req, res) => {
+    res.render("filmes",{
+        filmes: [
+            {nome: "a", ano: 2001},
+            {nome: "b", ano: 2002},
+            {nome: "c", ano: 2003}
+        ]
+    });
 });
 
 app.listen(8081, () => {

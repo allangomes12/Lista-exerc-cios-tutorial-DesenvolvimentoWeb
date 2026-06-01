@@ -6,10 +6,12 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Lista de filmes</h1>
+
     <ul>
-    {{#each filmes}}
-        <li>{{nome}} - {{ano}}</li>
-    {{/each}}
+        {{#each filme}}
+            <li>{{this}}</li>
+        {{/each}}
     </ul>
 </body>
 </html>
