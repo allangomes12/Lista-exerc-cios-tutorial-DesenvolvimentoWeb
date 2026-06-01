@@ -1,3 +1,5 @@
+// integrantes: Allan Poul, Anielly Valéria e Rebeca Vitória
+
 const express = require("express")
 const exphbs = require("express-handlebars")
 const app = express()
@@ -82,6 +84,28 @@ app.get("/perfil", (req, res) => {
         nome: "allan",
         idade: 16
     });
+});
+
+// questão 14
+app.get("/filmes", (req, res) => {
+    res.render("filmes", {
+        filmes: [
+            'Terror',
+            'Comédia',
+            'Romance'
+        ]
+    })
+});
+
+// questão 15
+app.get("/perfil2", (req, res) => {
+    res.render("perfil2", {
+        perfil: [
+            {nome:"Rebeca", admin: true},
+            {nome:"Allan",  admin: false}
+        ]
+
+    })
 });
 
 app.listen(8081, () => {
